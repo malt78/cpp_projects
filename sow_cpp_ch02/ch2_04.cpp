@@ -3,6 +3,7 @@
     and tip for $88.67.
 */
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() 
@@ -12,6 +13,7 @@ int main()
   double TIP = 0.20 * (BILL_TOTAL * TAX); // Tip is 20% after adding the tax.
 
   // Test statement for correct output
-  cout << "$" << TIP << endl;
+
+  cout << "$" << setprecision(4) << TIP << endl;
 
 }
