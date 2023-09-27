@@ -32,8 +32,8 @@ int main()
         cout << "Grade D\n";
     else if (test_score >= 0)
         cout << "Grade F\n";
-    else 
-        cout << "Invalid test score."; 
+    else                      // This else statment prevents crashes from invalid input.
+        cout << "Invalid test score.";  
 
 return 0;
 
