@@ -21,6 +21,7 @@ int main()
     cout << "Enter your test score to get letter grade: " << endl;
     cin >> test_score;
 
+    // This demonstrates the if-else statment
     if (test_score >= 90)
         cout << "Grade A\n";
     else if (test_score >= 80)
