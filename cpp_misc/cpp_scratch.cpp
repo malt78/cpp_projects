@@ -10,30 +10,16 @@ using namespace std;
                   
 int main() 
 {
-  // This current program determines a letter grade based on user input.
-    const int A_score = 90,
-              B_score = 80,
-              C_score = 70,
-              D_score = 60;
+    int sales = 5;
+    int QUOTA_AMOUNT = 2;
+    bool SALES_QUOTA_MET;
 
-    int test_score;
-
-    cout << "Enter your test score to get letter grade: " << endl;
-    cin >> test_score;
-
-    // This demonstrates the if-else statment
-    if (test_score >= 90)
-        cout << "Grade A\n";
-    else if (test_score >= 80)
-        cout << "Grade B\n";
-    else if (test_score >= 70)
-        cout << "Grade C\n";
-    else if (test_score >=60)
-        cout << "Grade D\n";
-    else if (test_score >= 0)
-        cout << "Grade F\n";
-    else                      // This else statment prevents crashes from invalid input.
-        cout << "Invalid test score.";  
+  if (sales >= QUOTA_AMOUNT) // Brackets create a block statement.
+  {  SALES_QUOTA_MET = 1; // In C++, 1 represents the bool value 'true'.
+    cout << "You have met your sales quota!" << endl;
+  }
+  else // No brackets are needed because else has a single line statment.
+    SALES_QUOTA_MET = 0; // In C++, 0 represents the bool value 'false'.
 
 return 0;
 
