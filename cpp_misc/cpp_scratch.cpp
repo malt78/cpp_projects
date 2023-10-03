@@ -13,13 +13,14 @@ int main()
     int sales = 5;
     int QUOTA_AMOUNT = 2;
     bool SALES_QUOTA_MET;
+    int DATE = 01;
 
-  if (sales >= QUOTA_AMOUNT) // Brackets create a block statement.
-  {  SALES_QUOTA_MET = 1; // In C++, 1 represents the bool value 'true'.
-    cout << "You have met your sales quota!" << endl;
+  if (sales >= QUOTA_AMOUNT && DATE == 01) // Primary parameter 'sales' checked first to avoid short-circuit evaluation.
+  {  SALES_QUOTA_MET = 1; 
+    cout << "You have met your sales quota on time!" << endl;
   }
-  else // No brackets are needed because else has a single line statment.
-    SALES_QUOTA_MET = 0; // In C++, 0 represents the bool value 'false'.
+  else 
+    SALES_QUOTA_MET = 0;
 
 return 0;
 
