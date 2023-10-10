@@ -1,26 +1,30 @@
 /*
-  This file serves as a test/exploration file for
-  various c++ features. Items tested here may or
-  may not be used in future projects. Changes to
-  this file will vary greatly and may not resemble 
-  the original.
+  This program demonstrates the practical application
+  of conditional expressions. A consultants charges
+  you used as an example.
 */
 #include <iostream> 
+#include<iomanip>
 using namespace std;              
                   
 int main() 
 {
-    int sales = 5;
-    int QUOTA_AMOUNT = 2;
-    bool SALES_QUOTA_MET;
-    int DATE = 01;
+    const double PAY_RATE = 50.0;   // Hourly pay rate
+    const int MIN_HOURS = 5;        // Minimum billable hours
+    double hours,                   // Hours worked
+           charges;                 // Total charges
 
-  if (sales >= QUOTA_AMOUNT && DATE == 01) // Primary parameter 'sales' checked first to avoid short-circuit evaluation.
-  {  SALES_QUOTA_MET = 1; 
-    cout << "You have met your sales quota on time!" << endl;
-  }
-  else 
-    SALES_QUOTA_MET = 0;
+    // Get the hours worked.
+    cout << "How many hours were worked? ";
+    cin >> hours;
+
+    // Determine the hours to charge for.
+    hours = (hours < MIN_HOURS) ? MIN_HOURS : hours; 
+
+    // Calculate and display the charges.
+    charges = PAY_RATE * hours;
+    cout << fixed << showpoint << setprecision(2)
+         << "The charges are $" << charges << endl;
 
 return 0;
 
